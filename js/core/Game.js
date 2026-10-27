@@ -45,7 +45,7 @@ export class Game {
     }
 
     render(){
-        this.ctx.fillStyle = "#0f3460";
+        this.ctx.fillStyle = "#121212";
         this.ctx.fillRect(0, 0, GAME_WIDTH, GAME_HEIGHT);
     }
 
