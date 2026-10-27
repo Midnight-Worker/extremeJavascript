@@ -3,12 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Vanilla JavaScript Game Starter Kit</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <div id="gameContainer">
         <canvas id="gameCanvas"></canvas>
+
+        <!-- HUD -->
+        <div id="hud">
+            <div id="timer">0:00</div>
+            <div id="killCounter"></div>
+            <div id="healthBarContainer">
+                <div id="healthBarFill"></div>
+            </div>
+            <div id="missionBriefing">Vanilla JavaScript Game Starter Kit</div>
+        </div>
+
+        <!-- Main Menu -->
+         <div id="mainMenu" class="ui-panel">
+            <h1>Game Starter Kit</h1>
+            <button data-action="start">Play</button>
+            <div class="controls-list" data-controls-list></div>
+        </div>
+        <!-- Pause Menu -->
+        <div id="pauseMenu" class="ui-panel">
+            <h2>PAUSED</h2>
+            <button data-action="resume">RESUME</button>
+            <button data-action="returnToMenu">QUIT TO MENU</button>
+            <div class="controls-list" data-controls-list></div>
+        </div>
+        <!-- Loading Screen -->
+         <div id="loadingScreen" class="ui-panel active">
+            <h2>Loading...</h2>
+            <p>Sharpening the pixels...</p>
+         </div>
+        <!-- Game Over Screen -->
+         <div id="gameOverMenu" class="ui-panel">
+            <h1>Game Over</h1>
+            <button data-action="start">Play Again</button>
+            <button data-action="returnToMenu">Main Menu</button>
+         </div>
+        <!-- Mission Complete Screen -->
+        <div id="missionCompleteMenu" class="ui-panel">
+            <h1>Mission Complete</h1>
+            <button data-action="start">Play Again</button>
+            <button data-action="returnToMenu">Main Menu</button>
+        </div>
+        
     </div>
     
     <script type="module" src="js/main.js"></script>
